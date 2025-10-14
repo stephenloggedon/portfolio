@@ -1,0 +1,41 @@
+# Fly.io proxy files
+/.proxy
+
+# Git
+.git/
+.gitignore
+
+# Mix artifacts
+/_build/
+/deps/
+*.ez
+
+# Local development
+.env
+.env.local
+
+# Node
+/assets/node_modules/
+
+# Documentation
+/doc/
+
+# Test artifacts
+/cover/
+
+# Static artifacts you may not want in container
+/priv/static/
+
+# Ignore package tarball
+portfolio-*.tar
+
+# Ignore assets that have already been built
+/priv/static/assets/
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
