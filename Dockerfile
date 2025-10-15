@@ -3,12 +3,8 @@
 #
 # https://hub.docker.com/r/hexpm/elixir/tags?page=1&name=ubuntu
 # https://hub.docker.com/_/ubuntu?tab=tags
-ARG ELIXIR_VERSION=1.18.4
-ARG OTP_VERSION=26.2.5.11
-ARG DEBIAN_VERSION=bookworm-20241223-slim
-
-ARG BUILDER_IMAGE="hexpm/elixir:${ELIXIR_VERSION}-erlang-${OTP_VERSION}-debian-${DEBIAN_VERSION}"
-ARG RUNNER_IMAGE="debian:${DEBIAN_VERSION}"
+ARG BUILDER_IMAGE="elixir:1.18"
+ARG RUNNER_IMAGE="elixir:1.18"
 
 FROM ${BUILDER_IMAGE} as builder
 
@@ -59,8 +55,8 @@ RUN mix compile
 # Changes to config/runtime.exs don't require recompiling the code
 COPY config/runtime.exs config/
 
-# Compile assets
-RUN mix assets.deploy
+# Compile assets (skip esbuild since we already ran node build.js)
+RUN mix tailwind portfolio --minify && mix phx.digest
 
 # Build the release
 RUN mix release
@@ -99,4 +95,4 @@ USER nobody
 # RUN chmod +x /tini
 # ENTRYPOINT ["/tini", "--"]
 
-CMD ["/app/bin/server"]
+CMD ["/app/bin/portfolio", "start"]
