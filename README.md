@@ -16,11 +16,6 @@ A personal portfolio website built with Phoenix LiveView.
    mix setup
    ```
 
-2. **Set resume URL (optional):**
-   ```bash
-   export RESUME_URL="https://your-s3-url/resume.pdf"
-   ```
-
 3. **Start the Phoenix server:**
    ```bash
    mix phx.server
@@ -37,13 +32,6 @@ This application is configured to deploy to Fly.io with CI/CD via GitHub Actions
 Set the following secrets in Fly.io:
 ```bash
 fly secrets set SECRET_KEY_BASE=$(mix phx.gen.secret)
-fly secrets set RESUME_URL="https://your-s3-url/resume.pdf"
+fly secrets set RESUME_URL="https://your-object-storage-url/resume.pdf"
 ```
 
-## Learn more
-
-* Official website: https://www.phoenixframework.org/
-* Guides: https://hexdocs.pm/phoenix/overview.html
-* Docs: https://hexdocs.pm/phoenix
-* Forum: https://elixirforum.com/c/phoenix-forum
-* Source: https://github.com/phoenixframework/phoenix
