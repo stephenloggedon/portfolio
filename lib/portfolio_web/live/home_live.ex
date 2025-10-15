@@ -12,7 +12,7 @@ defmodule PortfolioWeb.HomeLive do
     <div class="min-h-screen flex flex-col items-center justify-center bg-white">
       <nav class="flex flex-col gap-4 text-xl font-mono">
         <a
-          href="https://stephenloggedon.com"
+          href="https://blog.stephenloggedon.com"
           target="_blank"
           rel="noopener noreferrer"
           class="text-gray-900 hover:bg-gray-100 px-4 py-2 transition-colors visited:text-gray-900"
