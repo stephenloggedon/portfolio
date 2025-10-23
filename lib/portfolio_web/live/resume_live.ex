@@ -68,7 +68,7 @@ defmodule PortfolioWeb.ResumeLive do
                   <h3 class="text-xl font-bold text-slate-800">Senior Software Engineer</h3>
                   <p class="text-slate-600 font-semibold">Oracle, Seattle, WA</p>
                 </div>
-                <span class="text-slate-600 italic">May 2024 – Aug 2025</span>
+                <span class="text-slate-600 italic">May 2024 – Oct 2025</span>
               </div>
               <ul class="list-disc list-outside ml-5 space-y-2 text-slate-700">
                 <li>
@@ -235,8 +235,28 @@ defmodule PortfolioWeb.ResumeLive do
             </div>
           </section>
 
+          <!-- Publications -->
+          <section class="mb-8">
+            <h2 class="text-2xl font-bold text-slate-800 border-b-2 border-slate-400 pb-2 mb-6">
+              PUBLICATIONS
+            </h2>
+            <div class="text-slate-700">
+              <p>
+                Jafarzadeh, M., <span class="font-bold">Brooks, S.</span>, Yu, S., Prabhakaran, B., & Tadesse, Y. (2021). A wearable sensor vest for social humanoid robots with GPGPU, IoT, and modular software architecture. <span class="italic">Robotics and Autonomous Systems</span>, 139, 103536.
+                <a
+                  href="https://doi.org/10.1016/j.robot.2020.103536"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-blue-600 hover:text-blue-800 underline"
+                >
+                  https://doi.org/10.1016/j.robot.2020.103536
+                </a>
+              </p>
+            </div>
+          </section>
+
           <!-- Education -->
-          <section>
+          <section class="mb-8">
             <h2 class="text-2xl font-bold text-slate-800 border-b-2 border-slate-400 pb-2 mb-6">
               EDUCATION
             </h2>
@@ -251,6 +271,7 @@ defmodule PortfolioWeb.ResumeLive do
               </div>
             </div>
           </section>
+
         </div>
       </div>
     </div>
